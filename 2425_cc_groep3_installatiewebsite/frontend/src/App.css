@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #111;
-    color: white;
+    color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -67,4 +67,52 @@ button:hover {
     padding: 1rem;
     background-color: black;
     color: gray;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #efefef;
+}
+h3 {
+    color: #333;
+    font-size: 2rem;
+}
+
+.gedichten-container {
+    margin-top: 20px;
+}
+
+.gedichten-list {
+    margin-top: 20px;
+}
+
+.gedicht {
+    background: #eee;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gedicht p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.gedicht small {
+    display: block;
+    margin-top: 10px;
+    color: #555;
 }

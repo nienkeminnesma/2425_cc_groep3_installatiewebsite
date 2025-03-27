@@ -194,6 +194,7 @@ button:hover {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    border-top: 2px solid #FF7C48;
 }
 
 /* Logo */

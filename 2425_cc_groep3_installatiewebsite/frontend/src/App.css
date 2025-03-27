@@ -65,21 +65,74 @@ p{
 }
 
 .header {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
-    font-size: 2rem;
-    opacity: 0;
-    animation: fadeIn 2s forwards 0.5s;
+    padding: 70px 20px;
+    background-color: #111;
+    color: white;
+    position: relative;
+    max-width: 80%;
+    margin: 0 auto;
 }
 
+/* Title Styling & Animation */
+.main-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 70px 0;
+    color: #D9D9D9;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards 0.5s;
+}
+
+/* Quote Container */
+.quote-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    position: relative;
+}
+
+.quote {
+    font-size: 1rem;
+    font-style: italic;
+    color: #bbb;
+    position: relative;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.quote:hover {
+    transform: scale(1.1);
+    color: #D9D9D9;
+}
+
+
+/* Quote Arrangement (Positioning Remains) */
+.quote-top-left { transform: translate(-100px, -15px); animation: fadeIn 1s ease-out forwards 1s; }
+.quote-top-center { transform: translate(0px, 5px); animation: fadeIn 1s ease-out forwards 1.5s; }
+.quote-top-right { transform: translate(100px, -15px); animation: fadeIn 1s ease-out forwards 2s; }
+
+.quote-bottom-left { transform: translate(-100px, 15px); animation: fadeIn 1s ease-out forwards 2.5s; }
+.quote-bottom-center { transform: translate(0px, -5px); animation: fadeIn 1s ease-out forwards 3s; }
+.quote-bottom-right { transform: translate(100px, 15px); animation: fadeIn 1s ease-out forwards 3.5s; }
+
+/* Keyframe Animations */
 @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
     to {
         opacity: 1;
     }
 }
+
+
 
 .main {
     padding: 2rem;
@@ -229,6 +282,8 @@ button:hover {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    border-top: 2px solid #FF7C48;
+
 }
 
 /* Logo */

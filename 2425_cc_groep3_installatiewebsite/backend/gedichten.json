@@ -20,19 +20,47 @@
     "datum": "2025-03-16T10:57:45.205Z"
   },
   {
-    "tekst": "test",
-    "datum": "2025-03-16T10:58:40.682Z"
+    "tekst": "Test Test\n",
+    "datum": "2025-03-19T18:45:52.675Z"
   },
   {
-    "tekst": "Wachtwoord toegevoegd",
-    "datum": "2025-03-16T11:22:38.306Z"
+    "tekst": "IMG_7105.HEIC",
+    "datum": "2025-03-19T18:51:17.645Z"
   },
   {
-    "tekst": "hallo wij zijn het",
-    "datum": "2025-03-17T08:11:56.729Z"
+    "tekst": "Test test test test",
+    "datum": "2025-03-22T20:45:11.503Z"
   },
   {
     "tekst": "hallo\n",
-    "datum": "2025-03-17T08:14:08.888Z"
+    "datum": "2025-03-22T21:50:21.747Z"
+  },
+  {
+    "tekst": "test test test\n",
+    "datum": "2025-03-22T22:08:43.386Z"
+  },
+  {
+    "tekst": "hallo",
+    "datum": "2025-03-22T22:19:18.770Z"
+  },
+  {
+    "tekst": "Hallo",
+    "datum": "2025-03-24T08:48:10.490Z",
+    "afbeelding": null
+  },
+  {
+    "tekst": "",
+    "datum": "2025-03-24T08:48:47.025Z",
+    "afbeelding": "http://localhost:3001/uploads/1742806127018.jpg"
+  },
+  {
+    "tekst": "",
+    "datum": "2025-03-26T21:38:59.058Z",
+    "afbeelding": "http://localhost:3001/uploads/1743025139037.png"
+  },
+  {
+    "tekst": "",
+    "datum": "2025-03-26T21:39:34.575Z",
+    "afbeelding": "http://localhost:3001/uploads/1743025174567.jpg"
   }
 ]

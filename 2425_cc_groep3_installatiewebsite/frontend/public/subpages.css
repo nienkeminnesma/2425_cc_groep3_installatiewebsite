@@ -1,0 +1,255 @@
+body {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #D9D9D9;
+}
+h2 {
+    border-bottom: 2px solid #FF7C48;
+    padding-bottom: 10px;
+    color: #D9D9D9;
+    font-size: 2rem;
+}
+h3 {
+    color: #333;
+    font-size: 2rem;
+}
+p{
+    color: #D9D9D9;
+    padding-right: 4rem;
+    font-size: 18px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #D9D9D9;
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: background 0.3s;
+}
+
+.nav-links a:hover {
+    background: #FF7C48;
+    border-radius: 5px;
+    color: #111;
+}
+
+.main {
+    padding: 2rem;
+    flex-grow: 1;
+}
+
+.concept-content {
+    display: flex;
+    flex-direction: row;  /* Zorg ervoor dat de tekst en afbeelding naast elkaar staan */
+    gap: 80px;  /* Ruimte tussen de tekst en de afbeelding */
+    align-items: flex-start;  /* Zorgt ervoor dat ze bovenaan uitgelijnd zijn */
+    margin-top: 50px;
+}
+
+.text-container {
+    flex: 1;  /* Zorgt ervoor dat de tekst ruimte inneemt */
+}
+
+.image-container {
+    flex-shrink: 0;  /* Zorg ervoor dat de afbeelding niet krimpt */
+}
+
+.image-container img {
+    max-width: 80%;  /* De afbeelding vult de container */
+    height: auto;
+}
+
+.action-button {
+    display: block;  /* Zorgt ervoor dat de knop op een nieuwe regel komt */
+    margin-top: 40px;  /* Ruimte tussen de tekst en de knop */
+    padding: 10px 20px;  /* Binnenmarges voor de knop */
+    background-color: #FF7C48;  /* Kleur van de knop */
+    color: white;  /* Kleur van de tekst op de knop */
+    border: none;  /* Geen rand rond de knop */
+    border-radius: 5px;  /* Afgeronde hoeken */
+    font-size: 1rem;  /* Tekstgrootte van de knop */
+    cursor: pointer;  /* Cursor verandert naar pointer bij hover */
+    text-align: center;  /* Zorgt ervoor dat de tekst in het midden staat */
+}
+
+.action-button:hover {
+    background-color: #D9D9D9;  /* Iets donkerder bij hover */
+    color: #FF7C48;
+}
+
+.stories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.story-card {
+    background-color: #222;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+button {
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: darkgray;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gedichten-container {
+    margin-top: 20px;
+}
+
+.gedichten-list {
+    margin-top: 20px;
+}
+
+.gedicht {
+    background: #eee;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gedicht p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.gedicht small {
+    display: block;
+    margin-top: 10px;
+    color: #555;
+}
+
+/* Algemene instellingen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Container voor het geheel */
+.container-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+/* Menu sectie */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Logo */
+.logo img {
+    width: 150px;  /* Pas dit aan naar de grootte van je logo */
+    margin-bottom: 20px;
+}
+
+/* Pagina links */
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin: 10px 0;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #FF7C48;
+}
+
+/* Social media icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    font-size: 30px; /* Zet de grootte van de iconen */
+    color: white; /* Zet de kleur van de iconen naar wit */
+    transition: transform 0.3s;
+    text-decoration: none; /* Verwijder onderlijning */
+}
+
+/* Hover effect voor de iconen */
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+
+/* Copyright sectie */
+.copy {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.copy p {
+    font-size: 14px;
+    color: #777;
+}
+

@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 function InvoerenPage() {
     const [tekst, setTekst] = useState('');
     const [wachtwoord, setWachtwoord] = useState('');
     const [geautoriseerd, setGeautoriseerd] = useState(false);
+    const [afbeeldingUrl, setAfbeeldingUrl] = useState(null); // URL van de geüploade afbeelding
+    const [afbeeldingBestand, setAfbeeldingBestand] = useState(null); // Bewaren van het bestand voor uploaden
 
     const handlePasswordSubmit = (e) => {
         e.preventDefault();
-        if (wachtwoord === 'jouwwachtwoord') {  // Zet hier het juiste wachtwoord in
+        if (wachtwoord === 'jouwwachtwoord') {
             setGeautoriseerd(true);
         } else {
             alert('Wachtwoord is onjuist!');
@@ -16,22 +19,55 @@ function InvoerenPage() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (!tekst.trim()) return;
 
-        fetch('http://localhost:3001/gedichten', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ tekst })
-        })
-        .then(res => res.json())
-        .then(() => {
-            setTekst('');
-            alert('Gedicht succesvol toegevoegd!');
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Er ging iets mis bij het toevoegen van het gedicht.');
-        });
+        // Als er geen tekst is, maar er wel een afbeelding is, is het toegestaan om in te dienen
+        if (!tekst.trim() && !afbeeldingBestand) {
+            alert('Je moet een afbeelding of tekst invoeren!');
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append('tekst', tekst); // Voeg de tekst toe aan de FormData
+        if (afbeeldingBestand) {
+            formData.append('afbeelding', afbeeldingBestand); // Voeg de afbeelding toe aan de FormData
+        }
+
+        console.log('Verzend formulier met FormData:', formData);
+
+        // Verzend de FormData naar de server
+        axios.post('http://localhost:3001/gedichten', formData)
+            .then(() => {
+                setTekst('');  // Reset de tekst
+                setAfbeeldingUrl(null);  // Reset de afbeelding URL
+                setAfbeeldingBestand(null);  // Reset de afbeelding bestand
+                alert('Gedicht succesvol toegevoegd!');
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('Er ging iets mis bij het toevoegen van het gedicht.');
+            });
+    };
+
+    const handleImageUpload = () => {
+        const fileInput = document.createElement('input');
+        fileInput.type = 'file';
+        fileInput.accept = 'image/*'; // Alleen afbeeldingen
+        fileInput.click();
+
+        fileInput.onchange = (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                // Zet het bestand in de state
+                setAfbeeldingBestand(file);
+
+                // Optioneel: Toon een preview van de afbeelding
+                const reader = new FileReader();
+                reader.onloadend = () => {
+                    setAfbeeldingUrl(reader.result); // Dit is de base64 encoded URL
+                };
+                reader.readAsDataURL(file);
+            }
+        };
     };
 
     return (
@@ -60,6 +96,15 @@ function InvoerenPage() {
                             rows="6"
                             style={{ width: '100%', padding: '10px', borderRadius: '5px', marginBottom: '20px' }}
                         />
+                        <button type="button" onClick={handleImageUpload}>
+                            Voeg Afbeelding Toe
+                        </button>
+                        {afbeeldingUrl && (
+                            <div>
+                                <h3>Afbeelding:</h3>
+                                <img src={afbeeldingUrl} alt="Geüploade afbeelding" style={{ width: '200px', height: 'auto' }} />
+                            </div>
+                        )}
                         <button type="submit" style={{ padding: '10px', background: '#007bff', color: 'white', border: 'none', borderRadius: '5px' }}>
                             Verstuur Gedicht
                         </button>

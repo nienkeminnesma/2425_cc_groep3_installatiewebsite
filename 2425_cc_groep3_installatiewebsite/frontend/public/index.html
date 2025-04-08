@@ -27,7 +27,7 @@
         </div>
     
         <!-- Main Title -->
-        <h1 class="main-title">Dichterlijke Inspiratie</h1>
+        <h1 class="main-title">Break the silence.</h1>
     
         <div class="quote-container">
             <!-- Bottom Quotes -->
@@ -37,13 +37,25 @@
         </div>
     </header>
 
+    <div class="scroll-down" onclick="scrollToMain()">
+        <i class="fas fa-chevron-down"></i>
+    </div>    
+    <script>
+        function scrollToMain() {
+            document.querySelector('.main').scrollIntoView({ behavior: 'smooth' });
+        }
+        </script>
+        
+
   <main class="main">
     <div class="concept">
         <h2>Concept</h2>
         <div class="concept-content">
             <div class="text-container">
-                <p>Wij zijn Tabula Captiva, een team bestaande uit 8 studenten van de AP hogeschool te Antwerpen. Samen willen we ervoor zorgen dat mensen die vastzitten in een gevangenis hun stem kunnen laten horen. Weet jij hoe de mensen zich daar voelen? Hoe hun cellen eruit zien? Wij zorgen ervoor dat je dat wel weet. Dat we allemaal even stilstaan bij hoe deze mensen zich voelen.</p>
-                <button class="action-button" onclick="window.location.href='concept.html'">Lees Meer</button>
+                <p><strong>Ontdek binnenkort de verhalen van geïnterneerden in immersive experience installation!</strong></p>
+                <br>
+                <p>In België belanden mensen met psychische problemen nog steeds in de gevangenis, vaak zonder de juiste zorg. Tabula Captiva brengt hun verhalen tot leven met licht, geluid en interactieve objecten in een nagebouwde cel. Een beklijvende ervaring die je uitnodigt om anders te kijken naar opsluiting, zorg en menselijkheid in de gevangenis.</p>
+                <button class="action-button" onclick="window.location.href='concept.html'">Meer over Tabula Captiva</button>
             </div>
             <div class="image-container">
                 <img src="images/concept.png" alt="Concept">
@@ -51,11 +63,16 @@
         </div>
     </div>
     <div class="concept">
-        <h2>Verhalen van binnenuit</h2>
-        <div class="concept-content">
+        <div class="stories-header">
+            <h2>Stories from the inside</h2>
+            <a href="verhalen.html" class="more-stories-button">
+                <span class="text"><i class="fas fa-chevron-right"></i></span>
+                <span class="arrow">More Stories</span>
+            </a>
+        </div>
+                <div class="concept-content">
             <div class="text-container">
                 <p>Wij zijn Tabula Captiva, een team bestaande uit 8 studenten van de AP hogeschool te Antwerpen. Samen willen we ervoor zorgen dat mensen die vastzitten in een gevangenis hun stem kunnen laten horen. Weet jij hoe de mensen zich daar voelen? Hoe hun cellen eruit zien? Wij zorgen ervoor dat je dat wel weet. Dat we allemaal even stilstaan bij hoe deze mensen zich voelen.</p>
-                <button class="action-button" onclick="window.location.href='concept.html'">Lees Meer</button>
             </div>
             <div class="image-container">
                 <img src="images/concept.png" alt="Concept">
@@ -89,7 +106,7 @@
 </div>
 </div>
     <div class="copy">
-      <p>&copy; 2025 Prison Stories. Alle rechten voorbehouden.</p>
+        <p>&copy; 2025 Tabula Captiva. Alle rechten voorbehouden.</p>
     </div>
 </body>
 </html>

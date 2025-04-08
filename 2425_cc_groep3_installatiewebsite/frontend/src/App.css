@@ -12,9 +12,7 @@ h1 {
     color: #D9D9D9;
 }
 h2 {
-    border-bottom: 2px solid #FF7C48;
-    padding-bottom: 10px;
-    color: #D9D9D9;
+    color: #FF7C48;
     font-size: 2rem;
 }
 h3 {
@@ -144,7 +142,7 @@ p{
     flex-direction: row;  /* Zorg ervoor dat de tekst en afbeelding naast elkaar staan */
     gap: 80px;  /* Ruimte tussen de tekst en de afbeelding */
     align-items: flex-start;  /* Zorgt ervoor dat ze bovenaan uitgelijnd zijn */
-    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .text-container {
@@ -161,22 +159,25 @@ p{
 }
 
 .action-button {
-    display: block;  /* Zorgt ervoor dat de knop op een nieuwe regel komt */
-    margin-top: 40px;  /* Ruimte tussen de tekst en de knop */
-    padding: 10px 20px;  /* Binnenmarges voor de knop */
-    background-color: #FF7C48;  /* Kleur van de knop */
-    color: white;  /* Kleur van de tekst op de knop */
-    border: none;  /* Geen rand rond de knop */
-    border-radius: 5px;  /* Afgeronde hoeken */
-    font-size: 1rem;  /* Tekstgrootte van de knop */
-    cursor: pointer;  /* Cursor verandert naar pointer bij hover */
-    text-align: center;  /* Zorgt ervoor dat de tekst in het midden staat */
+    display: inline-block;  
+    margin-top: 40px;  
+    padding: 12px 24px;  /* Adjusted padding for better proportions */
+    background-color: #111;  /* White background */
+    color: #FF7C48;  /* Orange text */
+    border: 2px solid #FF7C48;  /* Orange border */
+    border-radius: 50px;  /* Large value to make it fully rounded */
+    font-size: 1rem;  
+    cursor: pointer;  
+    text-align: center;  
+    transition: background-color 0.3s, color 0.3s;  /* Smooth effect */
 }
 
+/* Hover effect */
 .action-button:hover {
-    background-color: #D9D9D9;  /* Iets donkerder bij hover */
-    color: #FF7C48;
+    background-color: #FF7C48;  /* Orange background on hover */
+    color: white;  /* White text on hover */
 }
+
 
 .stories {
     display: grid;
@@ -343,3 +344,61 @@ button:hover {
     color: #777;
 }
 
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: #FF7C48;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translate(-50%, 0);
+    }
+    50% {
+        transform: translate(-50%, 10px);
+    }
+}
+
+
+.stories-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;  /* Space between title and button */
+}
+
+.more-stories-button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #FF7C48;  /* Orange text */
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 8px 16px;
+    border-radius: 50px;  /* Rounded button */
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    white-space: nowrap;
+}
+
+.more-stories-button .text {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.more-stories-button .arrow {
+    opacity: 0;  /* Initially hidden */
+    margin-left: 10px;  /* Space between text and arrow */
+    transition: opacity 0.3s, transform 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.more-stories-button:hover .arrow {
+    opacity: 1;  /* Arrow appears on hover */
+    transform: translateX(5px);  /* Arrow moves on hover */
+}

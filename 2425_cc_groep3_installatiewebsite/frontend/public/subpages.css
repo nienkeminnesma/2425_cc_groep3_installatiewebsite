@@ -320,10 +320,6 @@ button:hover {
       width: 100%;
       box-sizing: border-box;
     }
-    img{
-        max-width: 100%;
-        height: auto;
-    }
   }
   
   /* Responsive tweaks for tablets and smaller */
@@ -435,10 +431,6 @@ button:hover {
     h3 {
       font-size: 1.6rem;
     }
-    img{
-        max-width: 100%;
-        height: auto;
-    }
   }
   
   /* Extra adjustments for very small screens */
@@ -490,6 +482,11 @@ button:hover {
     background-color: #FF7C48;
     border-radius: 3px;
     transition: all 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Responsive Navigation */

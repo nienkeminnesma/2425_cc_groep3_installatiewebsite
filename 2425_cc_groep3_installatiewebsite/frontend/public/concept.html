@@ -12,11 +12,17 @@
         <div class="logo">
             <img src="images/logo.png" alt="Logo">
         </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="verhalen.html">Verhalen</a></li>
             <li><a href="concept.html">Concept</a></li>
         </ul>
+        <div class="overlay"></div>
     </nav>
 
 
@@ -88,5 +94,41 @@
     <div class="copy">
       <p>&copy; 2025 Tabula Captiva. Alle rechten voorbehouden.</p>
     </div>
+    <script src="/static/js/bundle.js"></script>
+    <script>
+        // Hamburger menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            const overlay = document.querySelector('.overlay');
+            
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                overlay.classList.toggle('active');
+                document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+            });
+            
+            // Close menu when clicking on a link or outside the menu
+            document.querySelectorAll('.nav-links a, .overlay').forEach(item => {
+                item.addEventListener('click', function() {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+            
+            // Close menu when window is resized to desktop size
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

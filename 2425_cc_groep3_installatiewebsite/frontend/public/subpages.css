@@ -299,3 +299,267 @@ button:hover {
     color: #777;
 }
 
+/* Small screen adjustments (phones) */
+@media (max-width: 480px) {
+    .header {
+      max-width: 95%;
+      padding: 40px 10px;
+    }
+    
+    .main-title {
+      font-size: 2rem;
+      margin: 30px 0;
+    }
+    
+    p {
+      padding-right: 0;
+      font-size: 16px;
+    }
+    
+    .action-button {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+  
+  /* Responsive tweaks for tablets and smaller */
+  @media (max-width: 1024px) {
+    .concept-content {
+      flex-direction: column;
+      gap: 40px;
+      text-align: left;
+    }
+    
+    .text-container,
+    .image-container {
+      width: 100%;
+      margin: 0 auto;
+    }
+    
+    .image-text-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .image-text-grid .item {
+      width: 80%;
+    }
+    
+    .stories-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    /* Quote adjustments for tablets */
+    .quote-container {
+      gap: 40px;
+    }
+    
+    .quote-top-left, 
+    .quote-top-right, 
+    .quote-bottom-left, 
+    .quote-bottom-right {
+      transform: translate(0, 0);
+    }
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    .nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      padding-top: 10px;
+    }
+    
+    .container-footer,
+    .footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .footer-links ul {
+      padding: 0;
+    }
+    
+    .quote-container {
+      flex-direction: column;
+      gap: 30px;
+    }
+    
+    .quote {
+      transform: none !important;
+      animation-delay: 0.5s !important;
+    }
+    
+    .gedichten-row {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .gedicht {
+      width: 90%;
+    }
+    
+    .stories {
+      grid-template-columns: 1fr;
+    }
+    
+    .scroll-down {
+      font-size: 24px;
+      bottom: 10px;
+    }
+    
+    .main {
+      padding: 1.5rem;
+    }
+    
+    .image-container img {
+      max-width: 100%;
+    }
+    
+    h2 {
+      font-size: 1.8rem;
+    }
+    
+    h3 {
+      font-size: 1.6rem;
+    }
+  }
+  
+  /* Extra adjustments for very small screens */
+  @media (max-width: 360px) {
+    .nav-links a {
+      padding: 6px 8px;
+      font-size: 14px;
+    }
+    
+    .main-title {
+      font-size: 1.7rem;
+    }
+    
+    .action-button {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+  }
+
+  /* Update your nav class to maintain proper justification */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative; /* Ensure positioning context */
+}
+
+/* Logo styling - keep as is */
+.logo img {
+    height: 40px;
+}
+
+/* Hamburger Menu Styles - update for positioning */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #FF7C48;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        position: absolute; /* Position absolutely */
+        right: 20px; /* Align to the right edge with some padding */
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%); /* Perfect vertical centering */
+        z-index: 20;
+    }
+    
+    .nav {
+        padding: 15px 20px;
+        position: relative;
+        flex-direction: row; /* Keep as row even in mobile */
+        justify-content: flex-start; /* Align logo to the left */
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #222;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transition: right 0.4s ease;
+        z-index: 10;
+        padding: 80px 0;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: 15px;
+        font-size: 18px;
+    }
+    
+    /* Hamburger menu animation */
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    
+    /* Add overlay when menu is open */
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 5;
+    }
+    
+    .overlay.active {
+        display: block;
+    }
+}

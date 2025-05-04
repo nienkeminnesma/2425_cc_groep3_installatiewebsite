@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gedichten</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
 <body>
     <nav class="nav">
@@ -17,7 +18,7 @@
             <span></span>
         </div>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
             <li><a href="verhalen.html">Verhalen</a></li>
             <li><a href="concept.html">Concept</a></li>
         </ul>
@@ -27,9 +28,11 @@
     <header class="header">
         <div class="quote-container">
             <!-- Top Quotes -->
-            <span class="quote quote-top-left">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</span>
-            <span class="quote quote-top-center">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</span>
-            <span class="quote quote-top-right">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</span>
+            <span class="quote quote-top-left">"De matrassen in de gevangenis zijn niet van de beste kwaliteit, maar na een half jaar zijn ze eigenlijk versleten en mogen ze vervangen worden. Je voelt gewoon de harde lattenbodem door je matras."</span>
+            <span class="quote quote-top-center">"Die foute vrienden, da's niet hun schuld, hè. Ge kiest daar eigenlijk zelf voor. Ge moet eerst naar uzelf wijzen en dan pas naar een ander."</span>
+            <span class="quote quote-top-right">"Als je op cel ligt met iemand met een hoog risico, of je bent er zelf één dan komen ze om de
+                vijftien minuten langs. Dan schijnen ze binnen met zaklampen om te kijken of alles in orde is.
+                Zo voelt ge u toch wel bekeken, ze."</span>
         </div>
     
         <!-- Main Title -->
@@ -37,20 +40,19 @@
     
         <div class="quote-container">
             <!-- Bottom Quotes -->
-            <span class="quote quote-bottom-left">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</span>
-            <span class="quote quote-bottom-center">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</span>
-            <span class="quote quote-bottom-right">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</span>
+            <span class="quote quote-bottom-left">"Echte regels voor de wc, die zijn er niet. Maar uit beleefdheid kijken we weg als iemand moet gaan. Als ik dan op de wc zit bijvoorbeeld, dan gaat m’n celgenoot een sigaret roken en kijkt hij weg door het raam."</span>
+            <span class="quote quote-bottom-center">"Op onze cel kunnen we ook bellen, maar dat kost wel veel geld. Da’s wel 11 cent per minuut, hè. Met de feestdagen hebben we dan wel 15 euro gekregen."</span>
+            <span class="quote quote-bottom-right">"Het is altijd gezellig om samen te eten. En omdat hij kookt, doe ik achteraf de afwas, dan zijn de taken eerlijk verdeeld. Ja zo heel dat kook gedeelte, zorgt wel echt voor een huiselijke sfeer. Zo vergeet ge toch efkes dat ge in den bak zit."</span>
         </div>
+        <div class="scroll-down" onclick="scrollToMain()">
+            <i class="fas fa-chevron-down"></i>
+        </div>    
+        <script>
+            function scrollToMain() {
+                document.querySelector('.main').scrollIntoView({ behavior: 'smooth' });
+            }
+            </script>
     </header>
-
-    <div class="scroll-down" onclick="scrollToMain()">
-        <i class="fas fa-chevron-down"></i>
-    </div>    
-    <script>
-        function scrollToMain() {
-            document.querySelector('.main').scrollIntoView({ behavior: 'smooth' });
-        }
-        </script>
         
 
   <main class="main">
@@ -75,15 +77,18 @@
                 <span class="text"><i class="fas fa-chevron-right"></i></span>
                 <span class="arrow">More Stories</span>
             </a>
-        </div>
-                <div class="concept-content">
-            <div class="text-container">
-                <p>Wij zijn Tabula Captiva, een team bestaande uit 8 studenten van de AP hogeschool te Antwerpen. Samen willen we ervoor zorgen dat mensen die vastzitten in een gevangenis hun stem kunnen laten horen. Weet jij hoe de mensen zich daar voelen? Hoe hun cellen eruit zien? Wij zorgen ervoor dat je dat wel weet. Dat we allemaal even stilstaan bij hoe deze mensen zich voelen.</p>
             </div>
-            <div class="image-container">
-                <img src="images/concept.png" alt="Concept">
-            </div>
-        </div>
+            <div class="image-text-grid">
+                <div class="item">
+                    <img src="images/home-verhaal1.png" alt="Image 1">
+                </div>
+                <div class="item-tekst">
+                    <p>Het is altijd gezellig om samen te eten. En omdat hij kookt, doe ik achteraf de afwas, dan zijn de taken eerlijk verdeeld. Ja zo heel dat kook gedeelte, zorgt wel echt voor een huiselijke sfeer. Zo vergeet ge toch efkes dat ge in den bak zit.</p>
+                </div>
+                <div class="item">
+                    <img src="images/home-verhaal2.png" alt="Image 2">
+                </div>
+            </div>  
     </div>
     <div class="stories" id="stories-container">
         <!-- Dynamisch geladen verhalen komen hier -->

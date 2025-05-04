@@ -18,21 +18,23 @@ function GedichtenPage() {
 
     reversedArray.forEach((gedicht, index) => {
         let columns = columnPattern[rowIndex % columnPattern.length];
-
+        
+        const hasText = gedicht.tekst && gedicht.tekst.trim() !== '';
+        
         tempRow.push(
             <div key={index} className="gedicht">
-                <p>{gedicht.tekst}</p>
+                {hasText && <p>{gedicht.tekst}</p>}
                 {gedicht.afbeelding && (
                     <img 
                         src={gedicht.afbeelding} 
                         alt="Gedicht afbeelding" 
-                        className="gedicht-img"
+                        className={hasText ? "gedicht-img" : "gedicht-img full-image"}
                     />
                 )}
-                <small>{new Date(gedicht.datum).toLocaleDateString()}</small>
+                {hasText && <small>{new Date(gedicht.datum).toLocaleDateString()}</small>}
             </div>
         );
-
+        
         if (tempRow.length === columns) {
             rows.push(<div key={rowIndex} className="gedichten-row">{tempRow}</div>);
             tempRow = [];

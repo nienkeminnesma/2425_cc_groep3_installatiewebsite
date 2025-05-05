@@ -16,10 +16,10 @@ const mainJs = jsFiles.find(f => f.startsWith("main.") && f.endsWith(".js"));
 const mainCss = cssFiles.find(f => f.startsWith("main.") && f.endsWith(".css"));
 
 // Inject them into the HTML (you can customize where)
-/*html = html.replace(
+html = html.replace(
   "</head>",
   `<link rel="stylesheet" href="/static/css/${mainCss}">\n</head>`
-);*/
+);
 html = html.replace(
   `<script src="/static/js/bundle.js"></script>`,
   `<script src="/static/js/${mainJs}"></script>`

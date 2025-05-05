@@ -4,12 +4,12 @@ function GedichtenPage() {
     const [gedichten, setGedichten] = useState([]);
 
     useEffect(() => {
-        let url = 'https://two425-cc-groep3-installatiewebsite.onrender.com/gedichten';
+        let url = 'https://two425-cc-groep3-installatiewebsite.onrender.com';
         if (window.location.hostname === 'localhost') {
-            url = 'http://localhost:3001/gedichten';
+            url = 'http://localhost:3001';
         }
 
-        fetch(url)
+        fetch(`${url}/gedichten`)
             .then(res => res.json())
             .then(data => setGedichten(data));
     }, []);
@@ -31,7 +31,7 @@ function GedichtenPage() {
                 {hasText && <p>{gedicht.tekst}</p>}
                 {gedicht.afbeelding && (
                     <img 
-                        src={gedicht.afbeelding} 
+                        src={`${url}/uploads/${gedicht.afbeelding}`} 
                         alt="Gedicht afbeelding" 
                         className={hasText ? "gedicht-img" : "gedicht-img full-image"}
                     />

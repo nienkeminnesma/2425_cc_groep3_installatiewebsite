@@ -39,7 +39,7 @@ app.post('/gedichten', upload.single('afbeelding'), (req, res) => {
     let afbeeldingUrl = null;
 
     if (req.file) {
-        afbeeldingUrl = `http://localhost:3001/uploads/${req.file.filename}`;
+        afbeeldingUrl = req.file.filename;
     }
 
     // Als er geen tekst is, maar er wel een afbeelding is, mag het wel

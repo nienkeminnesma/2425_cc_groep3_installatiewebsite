@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concept</title>
+    <link rel="stylesheet" href="subpages.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="verhalen.html">Verhalen</a></li>
+            <li><a href="concept.html" class="active">Concept</a></li>
+        </ul>
+        <div class="overlay"></div>
+    </nav>
+
+    <header class="header">
+        <div class="beteknis-tabulacaptiva">
+            <img src="images/betekenis.png" alt="Betekenis Tabula Captiva">
+        </div>
+        <div class="scroll-down" onclick="scrollToMain()">
+            <i class="fas fa-chevron-down"></i>
+        </div>    
+    </header>
+    <script>
+        function scrollToMain() {
+            document.querySelector('.concept').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+    <main class="main">
+        <div class="concept">
+            <h2>Over</h2>
+            <div class="concept-content">
+                <div class="text-container">
+                    <p>Tabula Captiva is een immersive storytelling experience die je meeneemt in het leven van <span style="color: #FF7C48;">geïnterneerden</span>, mensen met psychische problemen die opgesloten worden zonder strafrechtelijke veroordeling, in de gevangenis van de Begijnenstraat. 
+                        <br><br>
+                        In een <span style="color: #FF7C48;">nagebouwde cel</span> ontdek je hun verhalen via interactieve meubels uit de gevangenis zelf. Door aanraking activeren ze soundscapes en dynamische lichteffecten die samen hun <span style="color: #FF7C48;">verhalen vertellen</span>. 
+                        <br><br>
+                        De installatie vult het “lege blad” — tabula rasa — dat veel mensen hebben over geïnterneerden  — captiva  — en hun leefwereld. Met technologie en zintuiglijke beleving maken we het onzichtbare voelbaar en nodigen we bezoekers uit om na te denken over <span style="color: #FF7C48;">menselijkheid</span> achter tralies.</p>
+                </div>
+            </div>
+            <div class="image-text-grid">
+                <div class="item">
+                    <img src="images/turven-concept.png" alt="Image 1">
+                    <p><strong style="color: #FF7C48; font-size: 20px;">Passende opsluiting</strong><br>
+                        Door een tekort aan forensische instellingen zitten geïnterneerden in België in de gevangenis, vaak zonder de juiste zorg. Ondanks meerdere veroordelingen door het Europees Hof voor de Rechten van de Mens, blijft het probleem bestaan.</p>
+                </div>
+                <div class="item">
+                    <img src="images/potlood-concept.png" alt="Image 2">
+                    <p><strong style="color: #FF7C48; font-size: 20px;">Menselijkheid</strong><br>
+                        Geïnterneerden hebben strafbare feiten gepleegd, maar dat maakt hen niet minder menselijk. Ze hebben zorg en begeleiding nodig in plaats van opsluiting zonder perspectief. Hun verhalen verdienen een plaats, zodat ze niet worden vergeten. In de gevangenis worden ze vaak geconfronteerd met lange wachttijden voor evaluaties.</p>
+                </div>
+                <div class="item">
+                    <img src="images/potlood-concept.png" alt="Image 3">
+                    <p><strong style="color: #FF7C48; font-size: 20px;">Stereotypen doorbreken</strong><br>
+                        Gevangenen en geïnterneerden worden vaak gereduceerd tot clichés, maar de werkelijkheid is complexer. Achter de muren van de psychiatrische vleugel van de Begijnenstraat speelt zich een dagelijks leven af dat weinig mensen kennen. Met deze verhalen willen we een eerlijker beeld schetsen, voorbij de stigma’s en vooroordelen.</p>
+                </div>
+            </div>        
+        </div>
+    </main>
+
+
+<div class="container-footer">
+    <div class="footer">
+    <div class="logo">
+        <img src="images/logo.png" alt="Logo">
+    </div>
+    <div class="footer-links">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/frontend/public/verhalen.html">Verhalen</a></li>
+        <li><a href="/frontend/public/concept.html">Concept</a></li>
+    </ul>
+</div>
+<div class="social-icons">
+    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+</div>
+    <div class="copy">
+      <p>&copy; 2025 Tabula Captiva. Alle rechten voorbehouden.</p>
+    </div>
+    <script src="/static/js/bundle.js"></script>
+    <script>
+        // Hamburger menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            const overlay = document.querySelector('.overlay');
+            
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                overlay.classList.toggle('active');
+                document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+            });
+            
+            // Close menu when clicking on a link or outside the menu
+            document.querySelectorAll('.nav-links a, .overlay').forEach(item => {
+                item.addEventListener('click', function() {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+            
+            // Close menu when window is resized to desktop size
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

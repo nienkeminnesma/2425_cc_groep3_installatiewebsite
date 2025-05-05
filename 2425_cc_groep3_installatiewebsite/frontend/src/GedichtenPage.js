@@ -4,7 +4,12 @@ function GedichtenPage() {
     const [gedichten, setGedichten] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3001/gedichten')
+        let url = 'https://two425-cc-groep3-installatiewebsite.onrender.com/gedichten';
+        if (window.location.hostname === 'localhost') {
+            url = 'http://localhost:3001/gedichten';
+        }
+
+        fetch(url)
             .then(res => res.json())
             .then(data => setGedichten(data));
     }, []);

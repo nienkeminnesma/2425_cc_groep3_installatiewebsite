@@ -34,8 +34,13 @@ function InvoerenPage() {
 
         console.log('Verzend formulier met FormData:', formData);
 
+        let url = 'https://two425-cc-groep3-installatiewebsite.onrender.com/gedichten';
+        if (window.location.hostname === 'localhost') {
+            url = 'http://localhost:3001/gedichten';
+        }
+
         // Verzend de FormData naar de server
-        axios.post('http://localhost:3001/gedichten', formData)
+        axios.post(url, formData)
             .then(() => {
                 setTekst('');  // Reset de tekst
                 setAfbeeldingUrl(null);  // Reset de afbeelding URL

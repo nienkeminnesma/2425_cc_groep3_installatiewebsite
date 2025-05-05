@@ -8,7 +8,12 @@ function GedichtForm({ onNewGedicht }) {
         e.preventDefault();
         if (!tekst.trim()) return;
 
-        fetch('http://localhost:3001/gedichten', {
+        let url = 'https://two425-cc-groep3-installatiewebsite.onrender.com/gedichten';
+        if (window.location.hostname === 'localhost') {
+            url = 'http://localhost:3001/gedichten';
+        }
+
+        fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ tekst })

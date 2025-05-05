@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 
 function GedichtenPage() {
     const [gedichten, setGedichten] = useState([]);
-
+    let url = 'https://two425-cc-groep3-installatiewebsite.onrender.com';
+    if (window.location.hostname === 'localhost') {
+        url = 'http://localhost:3001';
+    }
     useEffect(() => {
-        let url = 'https://two425-cc-groep3-installatiewebsite.onrender.com';
-        if (window.location.hostname === 'localhost') {
-            url = 'http://localhost:3001';
-        }
+        
 
         fetch(`${url}/gedichten`)
             .then(res => res.json())

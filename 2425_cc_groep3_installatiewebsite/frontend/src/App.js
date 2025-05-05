@@ -21,12 +21,12 @@ function App() {
         <Router>
             <div className="container">
                 <nav>
-                    <Link to="/" style={{ marginRight: '10px' }}>Gedichten</Link>
-                    <Link to="/invoeren">Voeg Gedicht Toe</Link>  {/* Link naar invoeren */}
+                    <Link to="/verhalen.html" style={{ marginRight: '10px' }}>Gedichten</Link>
+                    <Link to="/verhalen.html/invoeren">Voeg Gedicht Toe</Link>  {/* Link naar invoeren */}
                 </nav>
                 <Routes>
-                    <Route path="/" element={<GedichtenPage />} />  {/* Gedichten worden hier weergegeven */}
-                    <Route path="/invoeren" element={<InvoerenPage />} />  {/* Pagina om gedicht toe te voegen */}
+                    <Route  path="/verhalen.html" element={<GedichtenPage />} />  {/* Gedichten worden hier weergegeven */}
+                    <Route path="/verhalen.html/invoeren" element={<InvoerenPage />} />  {/* Pagina om gedicht toe te voegen */}
                 </Routes>
             </div>
         </Router>

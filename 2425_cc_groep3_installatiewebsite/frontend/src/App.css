@@ -254,7 +254,6 @@ button:hover {
 
 .gedicht {
     background: #222;
-    padding: 15px;
     border-radius: 5px;
     text-align: left;
     flex: 1;
@@ -265,6 +264,7 @@ button:hover {
 .gedicht p {
     font-size: 16px;
     line-height: 1.5;
+    padding: 15px;
 }
 
 .gedicht small {

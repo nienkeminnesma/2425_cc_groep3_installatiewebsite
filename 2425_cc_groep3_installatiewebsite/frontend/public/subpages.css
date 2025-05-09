@@ -100,39 +100,48 @@ p{
 
 .concept-content {
     display: flex;
-    flex-direction: row;  /* Zorg ervoor dat de tekst en afbeelding naast elkaar staan */
-    gap: 80px;  /* Ruimte tussen de tekst en de afbeelding */
-    align-items: flex-start;  /* Zorgt ervoor dat ze bovenaan uitgelijnd zijn */
     margin-top: 50px;
     width: 55%;
-
 }
-
-.image-text-grid {
+.concept-puntjes{
+    margin-top: 180px;
+    margin-bottom: 100px;
+}
+/* Container for each image/text pair */
+.image-text-pair {
     display: flex;
-    justify-content: space-between;
     gap: 20px;
-    margin: 5rem auto; /* optional spacing from the paragraph */
+    margin: 20px auto;
+    max-width: 600px;  /* Adjust to taste */
 }
-.image-text-grid .item {
-    width: 30%;
+
+/* Image container */
+.item-image {
+    position: relative;
+    margin-top: -10%;
+}
+
+.item-image img {
+    width: 150px;
+    height: 200px;       /* Fixed height */
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Dotted line under the image */
+.dotted-line {
+    height: 150px;   /* gap height between images – adjust as needed */
+    border-left: 4px dotted #FF7C48;
+    margin: 5px 50%;
+}
+
+/* Text container */
+.item-text {
+    flex: 1;
     text-align: left;
 }
-.image-text-grid .item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-    align-items: center;
-}
 
-.image-container {
-    flex-shrink: 0;  /* Zorg ervoor dat de afbeelding niet krimpt */
-}
-.image-container img {
-    max-width: 80%;  /* De afbeelding vult de container */
-    height: auto;
-}
 .action-button {
     display: block;  /* Zorgt ervoor dat de knop op een nieuwe regel komt */
     margin-top: 40px;  /* Ruimte tussen de tekst en de knop */

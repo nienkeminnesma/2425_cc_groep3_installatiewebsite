@@ -6,13 +6,14 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 h1 {
     color: #D9D9D9;
 }
 h2 {
-    color: #FF7C48;
+    color: #D9D9D9;
     font-size: 2rem;
 }
 h3 {
@@ -135,6 +136,15 @@ p{
 .main {
     padding: 2rem;
     flex-grow: 1;
+    margin-top: 2rem;
+}
+.concept-home{
+    margin-top: 10rem;
+}
+.about-home-image img{
+    margin-top: -5rem;
+    width: 40rem;
+    height: auto;
 }
 
 .concept-content {
@@ -373,7 +383,7 @@ button:hover {
 
 .scroll-down {
     position: absolute;
-    bottom: 20px;
+    bottom: -100px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 30px;

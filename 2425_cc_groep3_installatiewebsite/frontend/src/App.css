@@ -337,27 +337,7 @@ button:hover {
 /* Logo */
 .logo img {
     width: 150px;  /* Pas dit aan naar de grootte van je logo */
-    margin-bottom: 20px;
-}
-
-/* Pagina links */
-.footer-links ul {
-    list-style: none;
-}
-
-.footer-links ul li {
-    margin: 10px 0;
-}
-
-.footer-links ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    transition: color 0.3s;
-}
-
-.footer-links ul li a:hover {
-    color: #FF7C48;
+    margin-top: 20px;
 }
 
 /* Social media icons */

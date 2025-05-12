@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './App.css';  // Zorg ervoor dat je de CSS-bestanden hebt geïmporteerd
 
 function InvoerenPage() {
     const [tekst, setTekst] = useState('');

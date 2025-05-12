@@ -97,29 +97,35 @@ p{
 
 .quote {
     font-size: 1rem;
-    font-style: italic;
-    color: #bbb;
     position: relative;
     opacity: 0;
     transform: scale(0.9);
     transition: transform 0.3s ease-in-out;
 }
 
+
+
+/* Quote Arrangement (Positioning Remains) */
+.quote-top-left { left: -100px; top:60px; transform: translateY(0); animation: fadeIn 1s ease-out forwards 1s; }
+.quote-top-center { left: 0px; top: 5px; transform: translateY(0); animation: fadeIn 1s ease-out forwards 1.5s; }
+.quote-top-right { left: 100px; top: 60px; transform: translateY(0); animation: fadeIn 1s ease-out forwards 2s; }
+
+.quote-bottom-left { left: -100px; top: 15px; transform: translateY(0); animation: fadeIn 1s ease-out forwards 2.5s; }
+.quote-bottom-center { left: 100px; top: 15px; transform: translateY(0); animation: fadeIn 1s ease-out forwards 3s; }
+
+.hover-quotes{
+    display: block;
+    transform: scale(0.9);
+    transition: all 0.3s ease-in-out;
+    color: #bbb;
+}
+
 /* Hover Effect */
-.quote:hover {
+.hover-quotes:hover {
     transform: scale(1.1);
     color: #D9D9D9;
 }
 
-
-/* Quote Arrangement (Positioning Remains) */
-.quote-top-left { transform: translate(-100px, -15px); animation: fadeIn 1s ease-out forwards 1s; }
-.quote-top-center { transform: translate(0px, 5px); animation: fadeIn 1s ease-out forwards 1.5s; }
-.quote-top-right { transform: translate(100px, -15px); animation: fadeIn 1s ease-out forwards 2s; }
-
-.quote-bottom-left { transform: translate(-100px, 15px); animation: fadeIn 1s ease-out forwards 2.5s; }
-.quote-bottom-center { transform: translate(0px, -5px); animation: fadeIn 1s ease-out forwards 3s; }
-.quote-bottom-right { transform: translate(100px, 15px); animation: fadeIn 1s ease-out forwards 3.5s; }
 
 /* Keyframe Animations */
 @keyframes fadeIn {
@@ -188,6 +194,89 @@ p{
     text-align: center;  
     transition: background-color 0.3s, color 0.3s;  /* Smooth effect */
 }
+
+.cta-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* of specifieke hoogte */
+  position: relative;
+}
+
+.cta-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.word {
+  font-size: 3rem;
+  transition: transform 0.5s ease;
+  z-index: 2;
+  position: relative;
+  line-height: 1;
+}
+
+/* Geen ruimte tussen Let's en Talk */
+.top {
+  margin-bottom: -0.1em; /* eventueel iets negatief voor extra strakke aansluiting */
+}
+
+.bottom {
+  margin-top: -0.1em;
+}
+
+/*homepage verhalen deel*/
+.cta-concept-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  align-items: flex-start;
+  align-items: center;
+}
+.cta-wrapper {
+  flex-shrink: 0;
+  width: 40rem;
+}
+.cta-media {
+  height: 0;
+  width: auto;
+  overflow: hidden;
+  opacity: 0;
+  transition: height 0.5s ease, opacity 0.5s ease;
+  z-index: 1;
+  position: relative;
+}
+.word-top, .word-bottom{
+    font-weight: 900;
+    font-size: 4rem;
+    color: #D9D9D9;
+    font-weight: bolder
+}
+
+.cta-media img {
+  height: 200px; /* vaste doelhoogte */
+  width: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Hover: media "opent zich" */
+.cta-wrapper:hover .cta-media {
+  height: 200px;
+  opacity: 1;
+}
+
+.homepage-verhalen {
+  flex: 1;
+}
+
+.verhaaltekst-container {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
 
 /* Hover effect */
 .action-button:hover {

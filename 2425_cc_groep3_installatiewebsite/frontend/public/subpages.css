@@ -127,7 +127,7 @@ p{
 }
 
 .item-image img {
-    width: 70px;
+    width: 100px;
     height: auto;       /* Fixed height */
     object-fit: cover;
     border-radius: 8px;

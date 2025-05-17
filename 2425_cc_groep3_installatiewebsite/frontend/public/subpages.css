@@ -290,15 +290,6 @@ button:hover {
     color: #777;
 }
 
-/* Responsive styles */
-@media (max-width: 1024px) {
-    .concept-content {
-        flex-direction: column;
-        width: 100%;
-        gap: 40px;
-    }
-}
-
 @media (max-width: 768px) {
     .nav {
         flex-direction: row;
@@ -386,6 +377,15 @@ button:hover {
 
     .quote-top-right {
         display: none !important;
+    }
+    .beteknis-tabulacaptiva img {
+    width: 70%;
+    display: inline-block;
+    }
+    .concept-content {
+        flex-direction: column;
+        width: 100%;
+        gap: 40px;
     }
 }
 

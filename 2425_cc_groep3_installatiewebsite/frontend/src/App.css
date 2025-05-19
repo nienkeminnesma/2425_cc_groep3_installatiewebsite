@@ -218,6 +218,10 @@ p{
   line-height: 1;
 }
 
+.homepage-tekening{
+    margin-top: -5rem;
+}
+
 /* Geen ruimte tussen Let's en Talk */
 .top {
   margin-bottom: -0.1em; /* eventueel iets negatief voor extra strakke aansluiting */

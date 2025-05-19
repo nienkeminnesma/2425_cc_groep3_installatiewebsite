@@ -704,6 +704,9 @@ h3 {
     .more-stories-button {
         justify-content: center;
     }
+    .homepage-tekening{
+    margin-top: 20px;
+}
 }
 
 /* Hamburger Menu Styles */

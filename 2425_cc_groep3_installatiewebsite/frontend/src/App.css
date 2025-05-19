@@ -144,15 +144,99 @@ p{
     flex-grow: 1;
     margin-top: 2rem;
 }
-.concept-home{
-    margin-top: 10rem;
-}
-.about-home-image img{
-    margin-top: -5rem;
-    width: 40rem;
-    height: auto;
+/* Use grid for the concept-home layout */
+.concept-home {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 20px;
+  align-items: start;
 }
 
+/* Place the heading on the left (first row) */
+.concept-home > h2 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* Place the concept content below the heading in the left column */
+.concept-home > .concept-content {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/* Place the about-home-image in the right column covering both rows */
+.concept-home > .about-home-image {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ensure the image scales correctly */
+.about-home-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive fallback to stacking on smaller screens */
+@media (max-width: 768px) {
+  .concept-home {
+    display: flex;
+    flex-direction: column;
+  }
+  .concept-home > h2,
+  .concept-home > .concept-content,
+  .concept-home > .about-home-image {
+    width: 100%;
+  }
+}
+.concept-home {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 20px;
+  align-items: start;
+}
+
+/* Place the heading on the left (first row) */
+.concept-home > h2 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* Place the concept content below the heading in the left column */
+.concept-home > .concept-content {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/* Place the about-home-image in the right column covering both rows */
+.concept-home > .about-home-image {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ensure the image scales correctly */
+.about-home-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive fallback to stacking on smaller screens */
+@media (max-width: 768px) {
+  .concept-home {
+    display: flex;
+    flex-direction: column;
+  }
+  .concept-home > h2,
+  .concept-home > .concept-content,
+  .concept-home > .about-home-image {
+    width: 100%;
+  }
+}
 .concept-content {
     display: flex;
     flex-direction: row;  /* Zorg ervoor dat de tekst en afbeelding naast elkaar staan */

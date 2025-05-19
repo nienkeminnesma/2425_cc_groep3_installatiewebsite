@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && node scripts/inject.js",
+    "build": "react-scripts build && node scripts/inject-verhalen.js && node scripts/inject-concept.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

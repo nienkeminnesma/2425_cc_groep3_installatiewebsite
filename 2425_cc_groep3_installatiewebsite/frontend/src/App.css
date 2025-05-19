@@ -903,3 +903,10 @@ h3 {
         display: block;
     }
 }
+/* Example hover effect for desktop */
+@media (min-width: 769px) {
+    .cta-wrapper:hover {
+        opacity: 0.9;
+        transition: opacity 0.3s ease;
+    }
+}

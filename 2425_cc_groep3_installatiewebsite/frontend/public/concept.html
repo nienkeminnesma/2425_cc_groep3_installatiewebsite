@@ -114,24 +114,6 @@
                 overlay.classList.toggle('active');
                 document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
             });
-            document.addEventListener('DOMContentLoaded', function() {
-    const ctaWrapper = document.querySelector('.cta-wrapper');
-    
-    // Ensure the element shows a pointer cursor for desktops
-    if(ctaWrapper) {
-        ctaWrapper.style.cursor = 'pointer';
-        ctaWrapper.addEventListener('click', function() {
-            // Optionally, you can add different behavior for mobile vs. desktop here
-            if (window.innerWidth <= 768) {
-                // On mobile: open (navigate) to the verhalen page immediately
-                window.location.href = 'verhalen.html';
-            } else {
-                // On desktop: after hover and click, navigate to the verhalen page
-                window.location.href = 'verhalen.html';
-            }
-        });
-    }
-});
             
             // Close menu when clicking on a link or outside the menu
             document.querySelectorAll('.nav-links a, .overlay').forEach(item => {
@@ -153,6 +135,24 @@
                 }
             });
         });
+        document.addEventListener('DOMContentLoaded', function() {
+    const ctaWrapper = document.querySelector('.cta-wrapper');
+    
+    // Ensure the element shows a pointer cursor for desktops
+    if(ctaWrapper) {
+        ctaWrapper.style.cursor = 'pointer';
+        ctaWrapper.addEventListener('click', function() {
+            // Optionally, you can add different behavior for mobile vs. desktop here
+            if (window.innerWidth <= 768) {
+                // On mobile: open (navigate) to the verhalen page immediately
+                window.location.href = 'verhalen.html';
+            } else {
+                // On desktop: after hover and click, navigate to the verhalen page
+                window.location.href = 'verhalen.html';
+            }
+        });
+    }
+});
     </script>
 </body>
 </html>

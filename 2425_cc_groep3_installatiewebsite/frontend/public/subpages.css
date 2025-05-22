@@ -69,6 +69,7 @@ p{
     color: #FF7C48;
 }
 
+/* CONCEPT PAGE */
 .main {
     padding: 2rem;
     flex-grow: 1;
@@ -147,86 +148,70 @@ p{
     text-align: left;
 }
 
-.action-button {
-    display: block;  /* Zorgt ervoor dat de knop op een nieuwe regel komt */
-    margin-top: 40px;  /* Ruimte tussen de tekst en de knop */
-    padding: 10px 20px;  /* Binnenmarges voor de knop */
-    background-color: #FF7C48;  /* Kleur van de knop */
-    color: white;  /* Kleur van de tekst op de knop */
-    border: none;  /* Geen rand rond de knop */
-    border-radius: 5px;  /* Afgeronde hoeken */
-    font-size: 1rem;  /* Tekstgrootte van de knop */
-    cursor: pointer;  /* Cursor verandert naar pointer bij hover */
-    text-align: center;  /* Zorgt ervoor dat de tekst in het midden staat */
-}
-
-.action-button:hover {
-    background-color: #D9D9D9;  /* Iets donkerder bij hover */
-    color: #FF7C48;
-}
-
-.stories {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-}
-
-.story-card {
-    background-color: #222;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1);
-}
-
-button {
-    background-color: gray;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-button:hover {
-    background-color: darkgray;
-}
-
+/*VERHALEN PAGE*/
 .container {
-    max-width: 800px;
+    max-width: 100%;
     margin: auto;
-    background: white;
+    background: #161616;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 .gedichten-container {
     margin-top: 20px;
+    text-align: center;
 }
-
 .gedichten-list {
     margin-top: 20px;
 }
-
 .gedicht {
-    background: #eee;
+    background: #222;
+    color: white;
     margin: 10px 0;
     border-radius: 5px;
     text-align: left;
-    max-width: 600px;
+    max-width: 100%;    
     margin-left: auto;
     margin-right: auto;
+    flex: 1;
 }
-
 .gedicht p {
     font-size: 16px;
     line-height: 1.5;
+    padding: 15px;
 }
-
 .gedicht small {
     display: block;
     margin-top: 10px;
     color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 15px;
+}
+.gedichten-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.gedichten-row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%; /* Adjust for your design */
+}
+.gedicht-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.gedicht-img.full-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    max-width: none; /* ensure full width coverage */
 }
 
 /* Algemene instellingen */
@@ -236,7 +221,7 @@ button:hover {
     box-sizing: border-box;
 }
 
-
+/* FOOTER */
 /* Container voor het geheel */
 .container-footer {
     display: flex;
@@ -244,52 +229,44 @@ button:hover {
     align-items: center;
     padding: 30px 20px;
 }
-
-/* Menu sectie */
 .footer {
     display: flex;
     justify-content: space-between;
     width: 100%;
     border-top: 2px solid #FF7C48;
 }
-
 /* Logo */
 .logo img {
     width: 150px;  /* Pas dit aan naar de grootte van je logo */
     margin-top: 20px;
 }
-
 /* Social media icons */
 .social-icons {
     display: flex;
     gap: 15px;
     margin-top: 20px;
 }
-
 .social-icons a {
     font-size: 30px; /* Zet de grootte van de iconen */
     color: white; /* Zet de kleur van de iconen naar wit */
     transition: transform 0.3s;
     text-decoration: none; /* Verwijder onderlijning */
 }
-
 /* Hover effect voor de iconen */
 .social-icons a:hover {
     transform: scale(1.1);
 }
-
-
 /* Copyright sectie */
 .copy {
     margin-top: 30px;
     text-align: center;
 }
-
 .copy p {
     font-size: 14px;
     color: #777;
 }
 
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .nav {
         flex-direction: row;

@@ -76,7 +76,7 @@ p{
 }
 
 .beteknis-tabulacaptiva {
-    margin: 8rem auto;
+    margin: 6rem auto;
     text-align: center;
 }
 
@@ -87,7 +87,7 @@ p{
 
 .scroll-down {
     position: absolute;
-    margin-bottom: 8.4rem;
+    bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 30px;
@@ -107,7 +107,7 @@ p{
 
 .concept-content {
     display: flex;
-    margin-top: 50px;
+    margin-top: 40px;
     width: 55%;
 }
 .concept-puntjes{

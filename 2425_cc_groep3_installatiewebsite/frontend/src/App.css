@@ -24,6 +24,7 @@ h3 {
 p{
     color: #D9D9D9;
     font-size: 18px;
+    line-height: 1.6;
 }
 
 .nav {
@@ -141,7 +142,7 @@ p{
 
 .scroll-down {
     position: absolute;
-    bottom: -100px;
+    bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 30px;
@@ -162,28 +163,27 @@ p{
 .main {
     padding: 2rem;
     flex-grow: 1;
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 /* Use grid for the concept-home layout */
 .concept-home {
   display: grid;
   grid-template-columns: 50% 50%;
-  gap: 20px;
+  gap: 5px; /* reduced gap to 5px instead of 20px */
   align-items: start;
 }
 
-/* Place the heading on the left (first row) */
+/* Place the heading on the left (first row) with minimal bottom margin */
 .concept-home > h2 {
   grid-column: 1;
   grid-row: 1;
 }
 
-/* Place the concept content below the heading in the left column */
+/* Place the concept content immediately below with minimal top margin */
 .concept-home > .concept-content {
   grid-column: 1;
   grid-row: 2;
 }
-
 /* Place the about-home-image in the right column covering both rows */
 .concept-home > .about-home-image {
   grid-column: 2;
@@ -210,18 +210,6 @@ p{
   .concept-home > .about-home-image {
     width: 100%;
   }
-}
-.item-tekst{
-    width: 33%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;  /* Center text horizontally */
-    height: 200px;            /* Fixed height matching the images */
-    padding: 20px;
-    box-sizing: border-box;
-    box-shadow: 0 2px 6px 2px #d9d9d917;
-    border-radius: 5px;
 }
 
 .action-button {
@@ -262,7 +250,7 @@ p{
 }
 
 .homepage-tekening{
-    margin-top: -5rem;
+    margin-top: -1rem;
 }
 
 /* Geen ruimte tussen Let's en Talk */
@@ -322,6 +310,7 @@ p{
 .verhaaltekst-container {
   font-size: 1rem;
   line-height: 1.6;
+  margin-top: 40px;
 }
 
 

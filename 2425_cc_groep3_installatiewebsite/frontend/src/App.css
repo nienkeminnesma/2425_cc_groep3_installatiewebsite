@@ -384,21 +384,24 @@ p{
 /* Headings */
 h1 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin-bottom: 20px;
 }
 
 /* Input and textarea styles */
 input[type="password"],
 textarea {
-    width: 100%;
+    width: 50%;
     padding: 12px;
     font-size: 1rem;
     border: 1px solid #444;
     border-radius: 5px;
     background-color: #333;
     color: #eee;
+    margin: 10px auto; /* center the input */
+    display: block;
 }
+
 /* Button styles */
 button {
     padding: 12px;
@@ -409,6 +412,8 @@ button {
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    display: block;
+    margin: 10px auto 0; /* top margin to separate from textarea */
 }
 button:hover {
     background-color: #FFA07A;

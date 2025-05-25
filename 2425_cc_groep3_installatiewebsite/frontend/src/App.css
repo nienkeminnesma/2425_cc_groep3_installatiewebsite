@@ -490,6 +490,11 @@ button:hover {
         width: 100%;
         justify-content: center;
     }
+    .cta-media {
+        height: 200px;
+        opacity: 1;
+        border-radius: 10px;
+  }
 
     .word-top,
     .word-bottom,

@@ -11,7 +11,7 @@ function InvoerenPage() {
 
     const handlePasswordSubmit = (e) => {
         e.preventDefault();
-        if (wachtwoord === 'jouwwachtwoord') {
+        if (wachtwoord === 'tabulacaptiva') {
             setGeautoriseerd(true);
         } else {
             alert('Wachtwoord is onjuist!');

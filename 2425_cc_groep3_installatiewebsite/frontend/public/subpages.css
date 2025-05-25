@@ -37,7 +37,8 @@ p{
 }
 
 .logo img {
-    height: 40px;
+    width: 150px;
+    height: auto;
 }
 
 .nav-links {
@@ -356,13 +357,17 @@ p{
         display: none !important;
     }
     .beteknis-tabulacaptiva img {
-    width: 70%;
+    width: 80%;
     display: inline-block;
     }
     .concept-content {
         flex-direction: column;
         width: 100%;
         gap: 40px;
+    }
+    .dotted-line {
+        height: 240px;   /* increased height for mobile */
+        border-left: 4px dotted #FF7C48;
     }
 }
 

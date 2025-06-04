@@ -11,7 +11,7 @@ function InvoerenPage() {
 
     const handlePasswordSubmit = (e) => {
         e.preventDefault();
-        if (wachtwoord === 'tabulacaptiva-begijnenstraat') {
+        if (wachtwoord === process.env.REACT_APP_WACHTWOORD) {
             setGeautoriseerd(true);
         } else {
             alert('Wachtwoord is onjuist!');
